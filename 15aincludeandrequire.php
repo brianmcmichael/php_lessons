@@ -1,4 +1,4 @@
 <?php
 
 
-    echo("this is the included file");
+echo("this is the included file");

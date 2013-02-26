@@ -2,9 +2,8 @@
 
 $x = array("alex", "victor", "john");
 
-foreach($x as $value)
-{
-    echo $value."<br />";
+foreach ($x as $value) {
+    echo $value . "<br />";
 }
 
 /*

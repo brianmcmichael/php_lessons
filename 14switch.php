@@ -2,8 +2,7 @@
 
 $i = 0;
 
-switch($i)
-{
+switch ($i) {
     case 0:
         echo "the variable is 0";
         break;

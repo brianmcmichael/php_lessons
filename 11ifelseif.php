@@ -3,15 +3,10 @@
 $x = 2;
 $y = 2;
 
-if($x < $y)
-{
+if ($x < $y) {
     echo "x is less than y";
-}
-elseif($x > $y)
-{
+} elseif ($x > $y) {
     echo "x is not less than y";
-}
-else
-{
+} else {
     echo "x is equal to y";
 }

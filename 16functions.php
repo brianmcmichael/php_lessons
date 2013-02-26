@@ -10,8 +10,7 @@ function test($num1, $num2)
 $a = 465;
 $b = 542;
 
-for ($i = 0; $i < $a; $i++)
-{
-    echo test($a, $b+$i)."<br />";
+for ($i = 0; $i < $a; $i++) {
+    echo test($a, $b + $i) . "<br />";
 }
 

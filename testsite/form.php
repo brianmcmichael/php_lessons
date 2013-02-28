@@ -23,6 +23,10 @@
             <td width="10%">Password: <input type="password" name="password"/></td>
         </tr>
         <br/>
+        <tr>
+            <td width="10%">Confirm Password: <input type="password" name="cpassword"/></td>
+        </tr>
+        <br/>
     </table>
     <p>
         <input type="submit" value="register"/> <br/>

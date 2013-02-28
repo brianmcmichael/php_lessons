@@ -3,22 +3,40 @@
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+$cpassword = $_POST['cpassword'];
 
-if ($name && $email && $password) {
-    //using XAMPP, root ok.
-    mysql_connect("localhost", "root", "") or die("We couldn't connect!");
+if ($name && $email && $password && $cpassword) {
 
-    mysql_select_db("testsite");
+    if($password == $cpassword) {
 
-    mysql_query("INSERT INTO users(name, email, password) VALUES('$name','$email','$password')");
+        //using XAMPP, root ok.
+        mysql_connect("localhost", "root", "") or die("We couldn't connect!");
 
-    $registered = mysql_affected_rows();
-    echo "$registered row was inserted";
+        mysql_select_db("testsite");
 
-} else {
+        $username = mysql_query("SELECT name FROM users WHERE name='$name'");
+        $count = mysql_num_rows($username);
+
+        if($count != 0){
+            include('links.php');
+            die("This user already exists! Please type another name.");
+        }
+
+        mysql_query("INSERT INTO users(name, email, password) VALUES('$name','$email','$password')");
+
+        echo "You have successfully registered.";
+
+        mysql_close();
+
+    }
+    else{
+        echo "Your passwords don't match";
+    }
+}
+ else {
     echo "You have to complete the form.";
 }
 
-mysql_close();
+
 
 include('links.php');

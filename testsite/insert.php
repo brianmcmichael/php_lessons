@@ -20,3 +20,5 @@ if ($name && $email && $password) {
 }
 
 mysql_close();
+
+include('links.php');

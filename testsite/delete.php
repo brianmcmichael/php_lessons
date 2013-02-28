@@ -1,6 +1,6 @@
 <?php
 
-echo "<h3>Choose an ID to edit:</h3>";
+echo "<h3>Choose an ID to delete:</h3>";
 
 mysql_connect("localhost", "root", "") or die("Problem with connection.");
 
@@ -22,7 +22,7 @@ while($row=mysql_fetch_array($result)) {
     $password=$row['password'];
 
     echo "<tr><td align=center>
-    <a href=\"edit.php?ids=$id&names=$name&emails=$email&passwords=$password\">$id</a></td>
+    <a href=\"delete1.php?ids=$id&names=$name&emails=$email&passwords=$password\">$id</a></td>
         <td>$name</td><td>$email</td><td>$password</td></tr>";
 } echo "</table>";
 
@@ -31,6 +31,4 @@ mysql_close();
 ?>
 
 
-        <?php include("links.php"); ?>
-
-
+<?php include("links.php"); ?>

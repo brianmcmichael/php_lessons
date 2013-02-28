@@ -14,12 +14,12 @@ echo "<tr><td width=\"20%\" align=center bgcolor=\"FFFF00\">ID</td>
 <td width=\"40%\" align=center bgcolor=\"FFFF00\">EMAIL</td>
 <td width=\"40%\" align=center bgcolor=\"FFFF00\">PASSWORD</td></tr>";
 
-while($row=mysql_fetch_array($result)) {
+while ($row = mysql_fetch_array($result)) {
 
-    $id=$row['id'];
-    $name=$row['name'];
-    $email=$row['email'];
-    $password=$row['password'];
+    $id = $row['id'];
+    $name = $row['name'];
+    $email = $row['email'];
+    $password = $row['password'];
 
     echo "<tr><td align=center>
     <a href=\"edit.php?ids=$id&names=$name&emails=$email&passwords=$password\">$id</a></td>
@@ -31,6 +31,6 @@ mysql_close();
 ?>
 
 
-        <?php include("links.php"); ?>
+<?php include("links.php"); ?>
 
 

@@ -12,19 +12,23 @@
     <table border="0" width="60%">
 
         <tr>
-            <td width="10%">Name: <input type="text" name="name"/></td>
+            <td width="10%">Name:</td>
+            <td><input type="text" name="name" maxlength="15"/></td>
         </tr>
         <br/>
         <tr>
-            <td width="10%">Email: <input type="text" name="email"/></td>
+            <td width="10%">Email:</td>
+            <td><input type="text" name="email" maxlength="30"/></td>
         </tr>
         <br/>
         <tr>
-            <td width="10%">Password: <input type="password" name="password"/></td>
+            <td width="10%">Password:</td>
+            <td><input type="password" name="password" maxlength="15"/></td>
         </tr>
         <br/>
         <tr>
-            <td width="10%">Confirm Password: <input type="password" name="cpassword"/></td>
+            <td width="10%">Confirm Password:</td>
+            <td><input type="password" name="cpassword" maxlength="15"/></td>
         </tr>
         <br/>
     </table>
@@ -34,7 +38,7 @@
 </form>
 
 
-        <?php include("links.php"); ?>
+<?php include("links.php"); ?>
 
 </body>
 </html>

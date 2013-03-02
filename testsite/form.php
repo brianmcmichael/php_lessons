@@ -37,8 +37,5 @@
         <input type="reset" value="reset"/>
 </form>
 
-
-<?php include("links.php"); ?>
-
 </body>
 </html>

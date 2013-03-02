@@ -17,8 +17,7 @@ $start = ($page - 1) * $per_page;
 $query = mysql_query("SELECT name FROM users LIMIT $start, $per_page");
 
 while($query_row = mysql_fetch_assoc($query))            {
-    echo $query_row['name'].'<br />';
-}
+    echo $query_row['name'].'<br />';         }
 
 $prev = $page -1;
 $next = $page +1;

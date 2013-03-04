@@ -3,7 +3,7 @@
 $id = $_REQUEST['id'];
 $newname = $_REQUEST['newname'];
 $newemail = $_REQUEST['newemail'];
-$newpassword = $_REQUEST['newpassword'];
+$newpassword = md5($_REQUEST['newpassword']);
 
 mysql_connect("localhost", "root", "") or die("Problems with connection!");
 

@@ -6,7 +6,7 @@
  */
 
 $name = $_POST['name'];
-$password = $_POST['password'];
+$password = md5($_POST['password']);
 
 if($name && $password){
     mysql_connect("localhost", "root", "") or die("Problem with connection.");

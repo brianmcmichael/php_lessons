@@ -32,7 +32,8 @@ if ($name && $email && $password && $cpassword) {
                     echo "This email is already registered! Please type another name";
                 }
                 else{
-                    mysql_query("INSERT INTO users(name, email, password) VALUES('$name','$email','$password')");
+                    $passwordmd5 = md5($password);
+                    mysql_query("INSERT INTO users(name, email, password) VALUES('$name','$email','$passwordmd5')");
 
                     echo "You have successfully registered.";
                 }

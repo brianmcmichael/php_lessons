@@ -7,7 +7,7 @@
 
 <h2>Register Form</h2>
 
-<form method="post" action="insert.php">
+<form ENCTYPE="multipart/form-data" method="post" action="insert.php">
 
     <table border="0" width="60%">
 
@@ -31,8 +31,10 @@
             <td><input type="password" name="cpassword" maxlength="15"/></td>
         </tr>
         <br/>
+        <input type="hidden" name="MAX_FILE_SIZE" value="100000">
     </table>
     <p>
+        Choose your picture:<input type="file" name="upload"><p>
         <input type="submit" value="register"/> <br/>
         <input type="reset" value="reset"/>
 </form>

@@ -1,5 +1,9 @@
 <?php
 
+$mypic = $_FILES['upload']['name'];
+$temp = $_FILES['upload']['tmp_name'];
+$type = $_FILES['upload']['type'];
+
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -30,12 +34,19 @@ if ($name && $email && $password && $cpassword) {
                 elseif ($checkemail != 0) {
 
                     echo "This email is already registered! Please type another name";
-                }
-                else{
-                    $passwordmd5 = md5($password);
-                    mysql_query("INSERT INTO users(name, email, password) VALUES('$name','$email','$passwordmd5')");
+                } else {
+                    if(($type=="image/jpeg")||($type=="image/jpg")||($type=="image/bmp"))
+                    {
+                        move_uploaded_file($temp, "images/$mypic");
+                        echo "What a pretty face!<p><img border='1' width='70' height='70' src='images/$mypic'><p>";
+                        $passwordmd5 = md5($password);
+                        mysql_query("INSERT INTO users(name, email, password) VALUES('$name','$email','$passwordmd5')");
 
-                    echo "You have successfully registered.";
+                        echo "You have successfully registered.<a href='home.php'>Login now!</a>";
+
+                    } else {
+                        echo "This file has to be a jpeg, jpg, or bmp!";
+                    }
                 }
 
                 mysql_close();

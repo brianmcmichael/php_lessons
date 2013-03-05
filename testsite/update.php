@@ -29,7 +29,7 @@ while ($row = mysql_fetch_assoc($query)) {
 
     echo "<tr><td align=center>
     <a href=\"edit.php?ids=$id&names=$name&emails=$email&passwords=$password\">$id</a></td>
-        <td>$name</td><td>$email</td><td>$password</td></tr>";
+        <td>$name</td><td><a href=\"emailto.php?emails=$email\">$email</a></td><td>$password</td></tr>";
 } echo "</table>";
 
 $prev = $page -1;

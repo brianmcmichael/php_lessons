@@ -19,7 +19,7 @@ if(isset($_REQUEST['submit'])){
     $to = $_REQUEST['to'];
     $subject = $_REQUEST['subject'];
     $body = $_REQUEST['message'];
-    $from = "admin@whomwhomp.com";
+    $from = "admin@whompwhomp.com";
     $headers = "From: $from";
 
     if($to && $subject && $body) {

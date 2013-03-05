@@ -1,3 +1,4 @@
+<?php session_start(); include("session.php"); ?>
 <html>
 <head>
 
@@ -17,6 +18,13 @@
 <u>Results:</u>&nbsp
 
 <?php
+
+
+if(!isset($_SESSION['name']))
+{
+    echo "Access Denied!";
+}
+else{
 
     if(isset($_REQUEST['submit'])) {
 
@@ -68,6 +76,7 @@
 
 echo "<hr>";
 include('links.php');
+}
 ?>
 
 </body>

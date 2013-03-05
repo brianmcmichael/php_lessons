@@ -1,5 +1,14 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['name']))
+{
+    echo "Access Denied!";
+}
+else{
+    include("session.php");
+
 echo "<h3>Choose an ID to edit:</h3>";
 
 mysql_connect("localhost", "root", "") or die("Problem with connection.");
@@ -52,11 +61,7 @@ if($page < $pages){
 }
 echo '</center>';
 
+include("links.php");
 mysql_close();
-
+}
 ?>
-
-
-<?php include("links.php"); ?>
-
-

@@ -1,23 +1,13 @@
-<html>
-<head>
-
-</head>
-<body>
-
-<center>
-    Welcome to the control center!
-    <hr />
     <?php
-    include('links.php');
+
+    session_start();
+
+    if(!isset($_SESSION['name'])){
+        echo "Access Denied";
+        exit;
+    }   else {
+        include("session.php");
+        include('links.php');
+    }
+
     ?>
-
-
-</center>
-
-
-
-</body>
-
-
-</html>
-

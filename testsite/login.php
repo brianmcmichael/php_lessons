@@ -5,14 +5,17 @@
  * Time: 11:09 PM, 3/1/13, 2013
  */
 
-$name = $_POST['name'];
-$password = md5($_POST['password']);
+session_start();
 
-if($name && $password){
+if($_POST) {
+$_SESSION['name'] = $_POST['name'];
+$_SESSION['password'] = md5($_POST['password']);
+
+if($_SESSION['name'] && $_SESSION['password']){
     mysql_connect("localhost", "root", "") or die("Problem with connection.");
     mysql_select_db("testsite");
 
-    $query = mysql_query("SELECT * FROM users WHERE name='$name'");
+    $query = mysql_query("SELECT * FROM users WHERE name='".$_SESSION['name']."'");
     $numrows = mysql_num_rows($query);
 
     if($numrows != 0) {
@@ -20,8 +23,8 @@ if($name && $password){
             $dbname = $row['name'];
             $dbpassword = $row['password'];
         }
-        if($name==$dbname){
-            if($password==$dbpassword){
+        if($_SESSION['name']==$dbname){
+            if($_SESSION['password']==$dbpassword){
                 header("location: users.php");
             } else {
                 echo "Your password is incorrect!";
@@ -34,4 +37,8 @@ if($name && $password){
     }
 }  else {
     echo "You have to type a name and password!";
+}
+} else {
+    echo "Access denied!";
+    exit;
 }

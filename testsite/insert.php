@@ -11,9 +11,9 @@ $cpassword = $_POST['cpassword'];
 
 if ($name && $email && $password && $cpassword) {
 
-    if (preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i",$email)) {
+    if (preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $email)) {
 
-        if(strlen($password)>3) {
+        if (strlen($password) > 3) {
 
             if ($password == $cpassword) {
 
@@ -25,18 +25,16 @@ if ($name && $email && $password && $cpassword) {
                 $username = mysql_query("SELECT name FROM users WHERE name='$name'");
                 $count = mysql_num_rows($username);
                 $remail = mysql_query("SELECT email FROM users WHERE email='$email'");
-                $checkemail =  mysql_num_rows($remail);
+                $checkemail = mysql_num_rows($remail);
 
                 if ($count != 0) {
 
                     echo "This name is already registered! Please type another name";
-                }
-                elseif ($checkemail != 0) {
+                } elseif ($checkemail != 0) {
 
                     echo "This email is already registered! Please type another name";
                 } else {
-                    if(($type=="image/jpeg")||($type=="image/jpg")||($type=="image/bmp"))
-                    {
+                    if (($type == "image/jpeg") || ($type == "image/jpg") || ($type == "image/bmp")) {
                         $directory = "./profiles/$name/images/";
                         mkdir($directory, 0777, true);
                         move_uploaded_file($temp, "profiles/$name/images/$mypic");
@@ -60,9 +58,8 @@ if ($name && $email && $password && $cpassword) {
         } else {
             echo "Your password is too short. You need to type a password between 4 and 15 characters.";
         }
-    }
-    else {
-            echo "Please type a valid email.";
+    } else {
+        echo "Please type a valid email.";
     }
 
 

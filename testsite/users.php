@@ -1,13 +1,13 @@
-    <?php
+<?php
 
-    session_start();
+session_start();
 
-    if(!isset($_SESSION['name'])){
-        echo "Access Denied";
-        exit;
-    }   else {
-        include("session.php");
-        include('links.php');
-    }
+if (!isset($_SESSION['name'])) {
+    echo "Access Denied";
+    exit;
+} else {
+    include("session.php");
+    include('links.php');
+}
 
-    ?>
+?>

@@ -6,20 +6,17 @@
  */
 
 
-if(!isset($_SESSION['name'])) {
+if (!isset($_SESSION['name'])) {
     echo "Not a session";
-}
-else {
-    $dir = "./profiles/".$_SESSION['name']."/images";
+} else {
+    $dir = "./profiles/" . $_SESSION['name'] . "/images";
     $open = opendir($dir);
 
-    while(($file = readdir($open)) != false)
-    {
-        if($file != "." && $file != ".." && $file != "Thumbs.db")
-        {
+    while (($file = readdir($open)) != false) {
+        if ($file != "." && $file != ".." && $file != "Thumbs.db") {
             echo  "<img border'2' width='50' height='50' src='$dir/$file'>";
         }
     }
 
-    echo "&nbsp<b>".$_SESSION['name']."'s</b> session<br /><a href='logout.php'>Logout<a><hr />";
+    echo "&nbsp<b>" . $_SESSION['name'] . "'s</b> session<br /><a href='logout.php'>Logout<a><hr />";
 }

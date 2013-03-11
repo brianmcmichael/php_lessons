@@ -34,9 +34,11 @@
         <input type="hidden" name="MAX_FILE_SIZE" value="100000">
     </table>
     <p>
-        Choose your picture:<input type="file" name="upload"><p>
-        <input type="submit" value="register"/> <br/>
-        <input type="reset" value="reset"/>
+        Choose your picture:<input type="file" name="upload">
+
+    <p>
+        <input type="submit" value="Register"/> <br/>
+        <input type="reset" value="Reset Form"/>
 </form>
 
 </body>

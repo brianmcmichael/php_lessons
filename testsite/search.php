@@ -6,27 +6,25 @@
 <body>
 <center>
 
-<form method="GET" action="search.php">
-    <input type="text" name="search">
-    <input type="submit" name="submit" value="Search database">
+    <form method="GET" action="search.php">
+        <input type="text" name="search">
+        <input type="submit" name="submit" value="Search database">
 
-</form>
-    </center>
+    </form>
+</center>
 
-<hr />
+<hr/>
 
 <u>Results:</u>&nbsp
 
 <?php
 
 
-if(!isset($_SESSION['name']))
-{
+if (!isset($_SESSION['name'])) {
     echo "Access Denied!";
-}
-else{
+} else {
 
-    if(isset($_REQUEST['submit'])) {
+    if (isset($_REQUEST['submit'])) {
 
         $search = $_GET['search'];
         $terms = explode(" ", $search);
@@ -34,12 +32,12 @@ else{
 
         $i = 0;
 
-        foreach($terms as $each){
+        foreach ($terms as $each) {
 
             $i++;
-            if($i == 1){
+            if ($i == 1) {
                 $query .= "name LIKE '%$each%' ";
-            }  else {
+            } else {
                 $query .= "OR name LIKE '%$each%' ";
             }
         }
@@ -49,11 +47,11 @@ else{
         $query = mysql_query($query);
         $num = mysql_num_rows($query);
 
-        if($num > 0 && $search!="") {
+        if ($num > 0 && $search != "") {
 
             echo "$num result(s) found for <b>$search</b>!";
 
-            while($row = mysql_fetch_assoc($query)){
+            while ($row = mysql_fetch_assoc($query)) {
 
                 $id = $row['id'];
                 $name = $row['name'];
@@ -68,14 +66,13 @@ else{
 
         mysql_close();
 
-    }   else {
+    } else {
         echo "Please type any word";
     }
 
 
-
-echo "<hr>";
-include('links.php');
+    echo "<hr>";
+    include('links.php');
 }
 ?>
 

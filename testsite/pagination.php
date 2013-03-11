@@ -16,23 +16,24 @@ $page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
 $start = ($page - 1) * $per_page;
 $query = mysql_query("SELECT name FROM users LIMIT $start, $per_page");
 
-while($query_row = mysql_fetch_assoc($query))            {
-    echo $query_row['name'].'<br />';         }
+while ($query_row = mysql_fetch_assoc($query)) {
+    echo $query_row['name'] . '<br />';
+}
 
-$prev = $page -1;
-$next = $page +1;
+$prev = $page - 1;
+$next = $page + 1;
 
 echo '<br />';
 
-if($page > 1){
-echo "<a href='pagination.php?page=$prev'>Prev</a> ";
+if ($page > 1) {
+    echo "<a href='pagination.php?page=$prev'>Prev</a> ";
 }
 
-if($pages >= 1){
-    for($x=1;$x<=$pages;$x++)    {
-        echo ($x == $page) ? '<strong><a href="?page='.$x.'">'.$x.'</a></strong> ' : '<a href="?page='.$x.'">'.$x.'</a> ';
+if ($pages >= 1) {
+    for ($x = 1; $x <= $pages; $x++) {
+        echo ($x == $page) ? '<strong><a href="?page=' . $x . '">' . $x . '</a></strong> ' : '<a href="?page=' . $x . '">' . $x . '</a> ';
     }
 }
-if($page < $pages){
-echo "<a href='pagination.php?page=$next'>Next</a> ";
+if ($page < $pages) {
+    echo "<a href='pagination.php?page=$next'>Next</a> ";
 }

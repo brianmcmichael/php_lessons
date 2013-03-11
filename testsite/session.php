@@ -10,5 +10,16 @@ if(!isset($_SESSION['name'])) {
     echo "Not a session";
 }
 else {
-    echo "<b>".$_SESSION['name']."'s</b> session<br /><a href='logout.php'>Logout<a><hr />";
+    $dir = "./profiles/".$_SESSION['name']."/images";
+    $open = opendir($dir);
+
+    while(($file = readdir($open)) != false)
+    {
+        if($file != "." && $file != ".." && $file != "Thumbs.db")
+        {
+            echo  "<img border'2' width='50' height='50' src='$dir/$file'>";
+        }
+    }
+
+    echo "&nbsp<b>".$_SESSION['name']."'s</b> session<br /><a href='logout.php'>Logout<a><hr />";
 }

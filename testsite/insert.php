@@ -37,8 +37,10 @@ if ($name && $email && $password && $cpassword) {
                 } else {
                     if(($type=="image/jpeg")||($type=="image/jpg")||($type=="image/bmp"))
                     {
-                        move_uploaded_file($temp, "images/$mypic");
-                        echo "What a pretty face!<p><img border='1' width='70' height='70' src='images/$mypic'><p>";
+                        $directory = "./profiles/$name/images/";
+                        mkdir($directory, 0777, true);
+                        move_uploaded_file($temp, "profiles/$name/images/$mypic");
+                        echo "This will be your profile picture!<p><img border='1' width='50' height='50' src='profiles/$name/images/$mypic'><p>";
                         $passwordmd5 = md5($password);
                         mysql_query("INSERT INTO users(name, email, password) VALUES('$name','$email','$passwordmd5')");
 

@@ -1,3 +1,5 @@
+<!-- Page rendered obsolete by enter.php -->
+
 <?php
 
 session_start();

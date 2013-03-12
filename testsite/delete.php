@@ -60,7 +60,6 @@ if (!isset($_SESSION['name'])) {
     }
     echo '</center>';
 
-    include("links.php");
 
     mysql_close();
 

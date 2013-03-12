@@ -72,7 +72,7 @@ if (!isset($_SESSION['name'])) {
 
 
     echo "<hr>";
-    include('links.php');
+
 }
 ?>
 

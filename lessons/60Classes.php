@@ -6,13 +6,19 @@
  */
 
 class MyClass {
+    public $hello1 = "hello world public";
+    protected $hello2 = "hello world protected";
+    private $hello3 = "hello world private";
 
-    public $hello = "hello world";
-
-    public function result() {
-        echo $this->hello;
+    public function result(){
+        echo $this->hello3;
+    }
     }
 
+class MyClass2 extends MyClass{
+    public function result(){
+        echo $this->hello1;
+    }
 }
 
 $objectMyClass = new MyClass();

@@ -5,17 +5,20 @@
  * Time: 11:43 PM, 3/12/13, 2013
  */
 
-class Constants{
+class Constants
+{
     const RED = "#FF0000";
     const Hello = "Hello!";
 
-    function output(){
+    function output()
+    {
         echo self::RED;
     }
 
 
 }
+
 $c = new Constants();
 $c->output();
 
-echo "<br />".Constants::Hello;
+echo "<br />" . Constants::Hello;

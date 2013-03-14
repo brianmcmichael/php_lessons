@@ -5,16 +5,20 @@
  * Time: 11:55 PM, 3/12/13, 2013
  */
 
-class Test{
+class Test
+{
 
 
-    function __construct($x, $y){
+    function __construct($x, $y)
+    {
         echo "Hello $x and $y!";
     }
 
-    function __destruct(){
+    function __destruct()
+    {
         echo "Destruct";
     }
 }
+
 $c = new Test("Brian", "Moar Brian");
 unset($c);

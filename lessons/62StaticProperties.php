@@ -5,19 +5,23 @@
  * Time: 11:30 PM, 3/12/13, 2013
  */
 
-class MyClass {
+class MyClass
+{
 
     static $var = 1;
 
-    public function result(){
+    public function result()
+    {
         echo self::$var;
     }
 
-    static function test(){
+    static function test()
+    {
         echo "Brian!";
     }
 
-    static function result2(){
+    static function result2()
+    {
         echo "My name is ";
         self::test();
     }

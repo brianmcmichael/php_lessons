@@ -7,13 +7,12 @@
 
 $num = 10;
 
-try{
-    if($num>15){
+try {
+    if ($num > 15) {
         echo "Number is bigger than 15!";
-    }   else {
+    } else {
         throw new Exception('Number is less than 15!');
     }
-}
-catch(Exception $er){
-    echo 'Error: '.$er->getMessage();
+} catch (Exception $er) {
+    echo 'Error: ' . $er->getMessage();
 }

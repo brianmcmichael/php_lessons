@@ -5,18 +5,22 @@
  * Time: 12:08 AM, 3/12/13, 2013
  */
 
-class MyClass {
+class MyClass
+{
     public $hello1 = "hello world public";
     protected $hello2 = "hello world protected";
     private $hello3 = "hello world private";
 
-    public function result(){
+    public function result()
+    {
         echo $this->hello3;
     }
-    }
+}
 
-class MyClass2 extends MyClass{
-    public function result(){
+class MyClass2 extends MyClass
+{
+    public function result()
+    {
         echo $this->hello1;
     }
 }

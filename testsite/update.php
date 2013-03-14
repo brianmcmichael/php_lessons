@@ -34,8 +34,13 @@ if (!isset($_SESSION['name'])) {
         $email = $row['email'];
         $password = $row['password'];
 
+        $first = base64_encode($id);
+        $second = base64_encode($name);
+        $third = base64_encode($email);
+        $fourth = base64_encode($password);
+
         echo "<tr><td align=center>
-    <a href=\"edit.php?ids=$id&names=$name&emails=$email&passwords=$password\">$id</a></td>
+    <a href=\"edit.php?ids=$first&names=$second&emails=$third&passwords=$fourth\">$id</a></td>
         <td>$name</td><td><a href=\"emailto.php?emails=$email\">$email</a></td><td>$password</td></tr>";
     }
     echo "</table>";

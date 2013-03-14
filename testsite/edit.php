@@ -4,19 +4,19 @@
 </head>
 <body>
 
-<h3>Edit User: <?php echo $_REQUEST['names'];?></h3>
+<h3>Edit User: <?php echo base64_decode($_REQUEST['names']);?></h3>
 
 <form ENCTYPE="multipart/form-data" method="POST" action="change.php">
     <table border="0" width="60%">
         <tr>
             <td width="30%">Name:</td>
             <td><input type="text" name="newname"
-                       value="<?php echo $_REQUEST['names'];?>"></td>
+                       value="<?php echo base64_decode($_REQUEST['names']);?>"></td>
         </tr>
         <tr>
             <td width="30%">Email:</td>
             <td><input type="text" name="newemail"
-                       value="<?php echo $_REQUEST['emails'];?>"></td>
+                       value="<?php echo base64_decode($_REQUEST['emails']);?>"></td>
         </tr>
         <tr>
             <td width="30%">Password:</td>
@@ -30,7 +30,7 @@
     <p>
 
         <input type="submit" name="submit" value="Save & Update"/>
-        <input type="hidden" name="id" value="<?php echo $_REQUEST['ids']?>">
+        <input type="hidden" name="id" value="<?php echo base64_decode($_REQUEST['ids'])?>">
 
 
 </form>

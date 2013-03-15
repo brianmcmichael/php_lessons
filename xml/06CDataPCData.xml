@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+        <example>
+
+                <![CDATA[<aaa>bb&cc<<<]]>
+
+        </example>
+
+        PCData means "Parsed character data" and is everything outside of CDATA.

@@ -2,17 +2,20 @@
 
 <musicstore>
 
-<album category = "In Sides">
+<album>
+    <name>In Sides</name>
     <artist>Orbital</artist>
     <year>1996</year>
 </album>
 
-<album category="Vegas">
+<album>
+    <name>Vegas</name>
     <artist>The Crystal Method</artist>
     <year>1997</year>
 </album>
 
-<album category="Exit Planet Dust">
+<album>
+    <name>Exit Planet Dust</name>
     <artist>The Chemical Brothers</artist>
     <year>1995</year>
 </album>

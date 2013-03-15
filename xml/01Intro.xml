@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<musicstore>
+
+<album category = "In Sides">
+    <artist>Orbital</artist>
+    <year>1996</year>
+</album>
+
+<album category="Vegas">
+    <artist>The Crystal Method</artist>
+    <year>1997</year>
+</album>
+
+<album category="Exit Planet Dust">
+    <artist>The Chemical Brothers</artist>
+    <year>1995</year>
+</album>
+
+</musicstore>

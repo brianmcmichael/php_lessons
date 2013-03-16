@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE email SYSTEM "07DTDExternal.dtd">
+
+
+<email>
+    <to>Brian</to>
+    <from>Adelena</from>
+    <body>Hi. How are you?</body>
+</email>

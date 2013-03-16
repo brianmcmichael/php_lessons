@@ -6,4 +6,4 @@
 
         </example>
 
-        PCData means "Parsed character data" and is everything outside of CDATA.
+        <!-- PCData means "Parsed character data" and is everything outside of CDATA. -->

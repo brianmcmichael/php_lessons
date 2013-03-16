@@ -1,0 +1,12 @@
+
+
+
+<?xml version="1.0"?>
+
+<note xmlns="note" xsi:schemaLocation="http://www.w3.org 08SchemaFile.xsd">
+    <to>Jack</to>
+    <from>Jill</from>
+    <heading>Reminder</heading>
+    <body>Fetch a pail of water.</body>
+</note>
+

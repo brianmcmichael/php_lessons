@@ -1,25 +1,25 @@
-music{
+music {
     background-color: #ffffff;
     width: 100%;
 }
 
-album{
+album {
     display: block;
     margin-bottom: 30pt;
     margin-left: 0;
 }
 
-name{
+name {
     color: #ff0000;
     font-size: 20pt;
 }
 
-artist{
+artist {
     color: #0000ff;
     font-size: 20pt;
 }
 
-year, price{
+year, price {
     display: block;
     color: #000000;
     margin-left: 20pt;

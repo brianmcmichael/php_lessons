@@ -18,15 +18,26 @@
             return xmlhttp.responseXML;
         }
 
-        var xmlDoc = loadXMLDoc("xmldom.xml");
-        var txt = xmlDoc.getElementsByTagName('title')[0].childNodes[0].nodeValue;
+        function change(text) {
+            var xmlDoc = loadXMLDoc('xmldom.xml');
+            var x = xmlDoc.getElementsByTagName('title')[0].childNodes[0];
+            x.nodeValue = text;
 
-        document.write(txt);
+            var y = xmlDoc.getElementsByTagName('title');
+            for (i = 0; i < y.length; i++) {
+                document.write(y[i].childNodes[0].nodeValue);
+                document.write("<br />>");
+
+            }
+        }
+
 
     </script>
 
 </head>
 <body>
+
+<input type="button" value="Change it!" onclick="change('Everyday USA')"/>
 
 
 </body>

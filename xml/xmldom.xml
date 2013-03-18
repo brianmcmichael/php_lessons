@@ -8,7 +8,7 @@
         <price>30.00</price>
     </book>
     <book category="cooking">
-        <title language="en">Book Two</title>
+        <title language="en">Everyday Job</title>
         <author>Giada 2</author>
         <year>2005</year>
         <price>30.00</price>

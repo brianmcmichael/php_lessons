@@ -19,6 +19,35 @@
             return xmlhttp.responseXML;
         }
 
+        function create() {
+
+            x = xmlDoc.documentElement;
+            newNode = xmlDoc.createElement('book');
+            newTitle = xmlDoc.createElement('title');
+            newText = xmlDoc.createTextNode("This is the new title!");
+
+            newTitle.appendChild(newText);
+            newNode.appendChild(newTitle);
+
+            y = xmlDoc.getElementsByTagName('book')[0];
+
+            x.replaceChild(newNode, y);
+
+            z = xmlDoc.getElementsByTagName('title');
+            for (i = 0; i < z.length; i++) {
+                document.write(z[i].childNodes[0].nodeValue);
+                document.write('<br />');
+            }
+        }
+
+        function edit() {
+
+            x = xmlDoc.getElementsByTagName('author')[0].childNodes[0];
+            x.nodeValue = "Brian";
+
+        }
+
+
         function change(text) {
 
             var x = xmlDoc.getElementsByTagName('title')[0].childNodes[0];
@@ -61,6 +90,8 @@
 
 <input type="button" value="Remove it!" onclick="remove('author')"/>
 <input type="button" value="Prove it!" onclick="prove('author')"/>
+<input type="button" value="Create()" onclick="create()"/>
+<input type="button" value="Edit()" onclick="edit()"/>
 
 </body>
 </html>

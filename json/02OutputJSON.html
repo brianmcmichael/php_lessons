@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+
+        function go() {
+            var jsonobject = {
+                "name": "John",
+                "age": "33",
+                "phone": "325-6585",
+            };
+
+            document.getElementById('name').innerHTML = jsonobject.name;
+            document.getElementById('age').innerHTML = jsonobject.age;
+            document.getElementById('phone').innerHTML = jsonobject.phone;
+        }
+    </script>
+    <title></title>
+</head>
+<body>
+
+Name:
+<div id="name"></div>
+<br/>
+Age:
+<div id="age"></div>
+<br/>
+Phone:
+<div id="phone"></div>
+<br/>
+
+<input type="button" value="Go" onclick="go()"/>
+
+</body>
+</html>

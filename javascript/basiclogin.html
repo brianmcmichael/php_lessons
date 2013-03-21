@@ -1,0 +1,46 @@
+<head>
+
+    <title>
+
+    </title>
+
+    <script type="text/javascript">
+
+        var register = prompt("You are not registered, please type a password to register.");
+
+        function success()
+        {
+            document.write("Success! You are now in the registered users page");
+        }
+
+        function failed()
+        {
+            document.write("Wrong Password! You are now in the nonregistered users page.");
+        }
+
+        if(register!="")
+        {
+            var user = prompt("You have registered with a valid password, please confirm your password to enter the users page.");
+
+            if (register==user)
+            {
+                success();
+            }
+            else
+            {
+                failed();
+            }
+        }
+        else
+        {
+            alert("You have to type something!");
+        }
+
+    </script>
+
+    <body>
+
+
+
+    </body>
+</head>

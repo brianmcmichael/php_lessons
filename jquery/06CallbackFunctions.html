@@ -5,18 +5,26 @@
     <script type="text/javascript">
 
         $(document).ready(function () {
-            $('#button').click(function () {
-                $('#div1').hide(1000);
+
+            $("button").click(function () {
+
+                $("p").hide(1000, function () {
+                    alert("You hid that!");
+                });
+
             });
+
         });
+
 
     </script>
     <title></title>
 </head>
 <body>
 
-<div id="div1">Testing...</div>
-<input type="button" id="button" value="Hide it.">
+<button>Click</button>
+<p>Hello!</p>
+
 
 </body>
 </html>

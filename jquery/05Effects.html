@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#first").hover(function () {
+                $("#div1").slideToggle(500);
+            });
+
+            $("#second").dblclick(function () {
+                $("#div2").toggle(500);
+            });
+        });
+
+        //More jQuery Events at http://api.jquery.com/category/events/
+
+    </script>
+    <title></title>
+</head>
+<body>
+<a href="#" id="first" "><h3>News of Today!</h3></a>
+
+<p>
+
+<div id="div1" style="display:none;">This is the news of today. Nothing special.</div>
+<br/>
+
+<a href="#" id="second" "><h3>Sports News</h3></a>
+
+<p>
+
+<div id="div2" style="display:none;">This is the sports news of today. Nothing special.</div>
+<br/>
+
+</body>
+</html>

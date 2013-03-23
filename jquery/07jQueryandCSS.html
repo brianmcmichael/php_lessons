@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+
+        /*
+        $(document).ready(function () {
+            $('p').click(function(){
+                $(this).css("color", "blue");
+            });
+        });
+        */
+
+        var j = 1;
+
+        $(document).ready(function () {
+            $('#click').click(function(){
+                var data = j+"Hello<br />";
+                $('#i').prepend(data);
+                j++;
+            });
+        });
+
+
+    </script>
+    <title></title>
+</head>
+<body>
+
+<div id="i" ></div>
+
+<p>This is my first p</p>
+
+<input type="button" id="click" value="click" />
+
+</body>
+</html>

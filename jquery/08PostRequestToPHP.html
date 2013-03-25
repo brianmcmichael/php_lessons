@@ -4,16 +4,16 @@
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
 
-        $(document).ready(function(){
+        $(document).ready(function () {
 
-            $('#send').click(function(){
+            $('#send').click(function () {
                 $('result').hide();
                 var vname = $('#name').val();
                 var vpassword = $('#password').val();
                 $.post('08loginjquery.php', {
-                    phpname:vname,
-                    phppassword:vpassword
-                },function(data){
+                    phpname: vname,
+                    phppassword: vpassword
+                }, function (data) {
                     $('#result').html(data).fadeIn('slow');
                 });
             });
@@ -24,13 +24,16 @@
 </head>
 <body>
 
-Name:<input type="text" id="name" /><br />
-Password:<input type="password" id="password" /><br />
+Name:<input type="text" id="name"/><br/>
+Password:<input type="password" id="password"/><br/>
+
 <p>
-    <input type="button" id="send" value="submit" />
-    <p>
-    <div id="result" style="display: none"></div>
-    </p>
+    <input type="button" id="send" value="submit"/>
+
+<p>
+
+<div id="result" style="display: none"></div>
+</p>
 
 </body>
 </html>

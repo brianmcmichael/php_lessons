@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("form").submit(function () {
+
+                var send = $(this).serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "09phprequestfile.php",
+                    data: send,
+                    dataType: "json",
+                    success: function (msg) {
+                        //$("#result").html(msg+string+jqXHR);
+                        $("#result").html("Name: " + msg.name + "<br />Password: " + msg.password);
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script>
+    <title></title>
+</head>
+<body>
+
+
+<form>
+    Name: <input type="text" id="username" name="username"/><br/>
+    Password: <input type="password" id="password" name="password"/>
+
+    <p>
+        <input type="submit" id="submit" value="Submit"/>
+
+
+</form>
+
+<p>
+
+<div id="result"></div>
+
+</body>
+</html>

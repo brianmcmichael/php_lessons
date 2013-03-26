@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link type="text/css" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    <link type="text/css" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script>
-        $(document).ready(function(){
-
-            var x = ["Brian", "John", "Richard", "Victor"];
+        $(document).ready(function () {
 
             $("#query").autocomplete({
-                source: x;
+                source: '16search.php',
+                select: function (event, ui) {
+                    $("#result").html(ui.item.value);
+                }
             });
         });
     </script>
@@ -20,6 +21,7 @@
 <body>
 
 <input type="text" id="query"/>
+
 <div id="result"></div>
 
 </body>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+    <style>
+
+        ul {
+            border: 1px solid #000000;
+            padding: 0px;
+            width: 100px;
+            height: 100px;
+            list-style: none;
+        }
+
+    </style>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#cities,#food").sortable({containment: 'document', tolerance: 'pointer',
+                cursor: 'pointer', revert: 'true', opacity: '0.60', connectWith: '#cities,#food',
+                update: function () {
+                    list = $(this).text();
+                    $('#newlist').text(list);
+                }});
+        });
+
+    </script>
+
+    <title></title>
+</head>
+<body>
+
+<ul id="cities">
+    <li>London</li>
+    <li>Madrid</li>
+    <li>Boston</li>
+</ul>
+<ul id="food">
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Peaches</li>
+</ul>
+<div id="newlist"></div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+    <style>
+
+
+    </style>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#content").accordion({icons: {'header': 'ui-icon-plus', 'headerSelected': 'ui-icon-minus'},
+                collapsible: true, active: false});
+        })
+
+
+    </script>
+
+    <title></title>
+</head>
+<body>
+
+<div id="content">
+    <h3><a href="#">Home</a></h3>
+
+    <div>This is the home page!</div>
+    <h3><a href="#">About</a></h3>
+
+    <div>This is the about page!</div>
+    <h3><a href="#">Contact</a></h3>
+
+    <div>This is the contact page!</div>
+
+</div>
+
+</body>
+</html>
